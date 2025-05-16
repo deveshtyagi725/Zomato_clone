@@ -1,0 +1,87 @@
+/* Reset some basic styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background: url("/img/bg.png") no-repeat center center fixed;
+    background-size: cover;
+    color: #fff;
+}
+
+/* Header */
+header {
+    background-color: rgba(255, 0, 0, 0.85);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 40px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+}
+
+.logo img {
+    height: 50px;
+}
+
+header ul {
+    display: flex;
+    list-style: none;
+    gap: 30px;
+}
+
+header ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+header ul li a:hover {
+    color: #ffdcdc;
+}
+
+/* Main section */
+main {
+    text-align: center;
+    margin-top: 100px;
+    padding: 20px;
+}
+
+main img {
+    width: 150px;
+    animation: float 3s ease-in-out infinite;
+}
+
+main p {
+    font-size: 1.5rem;
+    margin-top: 20px;
+    background: rgba(0,0,0,0.4);
+    display: inline-block;
+    padding: 10px 20px;
+    border-radius: 10px;
+}
+
+/* Footer */
+footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background-color: rgba(255, 0, 0, 0.85);
+    text-align: center;
+    padding: 10px;
+    font-weight: bold;
+    color: white;
+}
+
+/* Animation */
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0px);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+}
