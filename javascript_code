@@ -1,0 +1,26 @@
+// Add some interactivity on load
+window.addEventListener("DOMContentLoaded", () => {
+    const headerLinks = document.querySelectorAll("header ul li a");
+
+    headerLinks.forEach(link => {
+        link.addEventListener("mouseover", () => {
+            link.style.color = "#ffff66";
+            link.style.transform = "scale(1.05)";
+        });
+
+        link.addEventListener("mouseout", () => {
+            link.style.color = "white";
+            link.style.transform = "scale(1)";
+        });
+    });
+
+    // Small pulse animation on logo
+    const logo = document.querySelector(".logo img");
+    logo.addEventListener("mouseenter", () => {
+        logo.style.transition = "transform 0.3s";
+        logo.style.transform = "rotate(5deg) scale(1.1)";
+    });
+    logo.addEventListener("mouseleave", () => {
+        logo.style.transform = "rotate(0deg) scale(1)";
+    });
+});
